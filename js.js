@@ -1,104 +1,104 @@
-const arrow = document.getElementById('arrow');
-const aboutArrow = document.getElementById('aboutArrow');
+const arrow = document.getElementById("arrow");
+const aboutArrow = document.getElementById("aboutArrow");
 
-const div1 = document.querySelector('.divStart1');
-const div2 = document.querySelector('.divStart2');
-const main = document.querySelector('main');
-const body = document.querySelector('body');
+const div1 = document.querySelector(".divStart1");
+const div2 = document.querySelector(".divStart2");
+const main = document.querySelector("main");
+const body = document.querySelector("body");
 
-const aboutP1 = document.querySelector('.about p:nth-of-type(1)')
-const aboutP2 = document.querySelector('.about p:nth-of-type(2)')
-const aboutH3first = document.querySelector('.about h3:nth-of-type(1)')
-const aboutH3second = document.querySelector('.about h3:nth-of-type(2)')
+const aboutP1 = document.querySelector(".about p:nth-of-type(1)");
+const aboutP2 = document.querySelector(".about p:nth-of-type(2)");
+const aboutH3first = document.querySelector(".about h3:nth-of-type(1)");
+const aboutH3second = document.querySelector(".about h3:nth-of-type(2)");
 
-const offerP = document.querySelector('.offer p')
+const offerP = document.querySelector(".offer p");
 
-const offerSpanArray = document.querySelectorAll('.offer span')
+const offerSpanArray = document.querySelectorAll(".offer span");
 
-const offerH3Array = document.querySelectorAll('.offer h3')
-const navLis = document.querySelectorAll("nav li")
+const offerH3Array = document.querySelectorAll(".offer h3");
+const navLis = document.querySelectorAll("nav li");
 
-const burger2 = document.querySelector('.burger2')
-const burger3 = document.querySelector('.burger3')
-const navIcon = document.querySelector('.icon')
-const nav = document.querySelector('nav')
+const burger2 = document.querySelector(".burger2");
+const burger3 = document.querySelector(".burger3");
+const navIcon = document.querySelector(".icon");
+const nav = document.querySelector("nav");
 
-
-// $('#fullpage').fullpage();
-
-function delayReset(){
-  navLis.forEach((li) => {
-    li.style.transitionDelay = 0+"s";
-  })
+function delayReset() {
+  navLis.forEach(li => {
+    li.style.transitionDelay = 0 + "s";
+  });
 }
 
-navIcon.addEventListener("click", function(){
+navIcon.addEventListener("click", function() {
   let delay = 0.5;
   console.log("elo");
-  navLis.forEach((li) => {
+  navLis.forEach(li => {
     li.classList.toggle("active");
-    li.style.transitionDelay = delay+"s";
+    li.style.transitionDelay = delay + "s";
     console.log(delay);
-    delay+=0.25;
-  })
-  burger2.classList.toggle('active');
-  burger3.classList.toggle('active');
+    delay += 0.25;
+  });
+  burger2.classList.toggle("active");
+  burger3.classList.toggle("active");
   nav.classList.toggle("active");
 
   setTimeout(delayReset, 1000);
-})
+});
 
-
-$('nav a').on('click', function () {
+$("nav a").on("click", function() {
   nav.classList.remove("active");
   burger2.classList.remove("active");
   burger3.classList.remove("active");
-  navLis.forEach((li) => {li.classList.remove("active")})
-  const goToSection = "[data-section=" + $(this).attr('class') + "]";
-  $('body, html').animate({
-   scrollTop: $(goToSection).offset().top
-  }, 1000)
-})
+  navLis.forEach(li => {
+    li.classList.remove("active");
+  });
+  const goToSection = "[data-section=" + $(this).attr("class") + "]";
+  $("body, html").animate(
+    {
+      scrollTop: $(goToSection).offset().top
+    },
+    1000
+  );
+});
 
-
-arrow.addEventListener('click',function(){
+arrow.addEventListener("click", function() {
   console.log("XDD0");
-  div1.classList.add('show');
-  div2.classList.add('show');
-  main.classList.add('show');
-  navIcon.classList.remove('hide');
-  body.style.overflowY="auto";
+  div1.classList.add("show");
+  div2.classList.add("show");
+  main.classList.add("show");
+  navIcon.classList.remove("hide");
+  body.style.overflowY = "auto";
 });
 
-aboutH3first.addEventListener('click',function(){
-  this.classList.add('active');
-  aboutH3second.classList.remove('active');
-  aboutP1.classList.add('show');
-  aboutP2.classList.add('hide');
-  aboutP1.classList.remove('hide');
-  aboutP2.classList.remove('show');
+aboutH3first.addEventListener("click", function() {
+  this.classList.add("active");
+  aboutH3second.classList.remove("active");
+  aboutP1.classList.add("show");
+  aboutP2.classList.add("hide");
+  aboutP1.classList.remove("hide");
+  aboutP2.classList.remove("show");
 });
 
-aboutH3second.addEventListener('click',function(){
-  this.classList.add('active');
-  aboutH3first.classList.remove('active');
-  aboutP2.classList.add('show');
-  aboutP1.classList.add('hide');
-  aboutP2.classList.remove('hide');
-  aboutP1.classList.remove('show');
+aboutH3second.addEventListener("click", function() {
+  this.classList.add("active");
+  aboutH3first.classList.remove("active");
+  aboutP2.classList.add("show");
+  aboutP1.classList.add("hide");
+  aboutP2.classList.remove("hide");
+  aboutP1.classList.remove("show");
 });
-
 
 const removeClass = () => {
-  offerH3Array.forEach((h3,i) => {
-    h3.classList.remove('active');
-    offerSpanArray[i].classList.remove('show');
-  })
-}
+  offerH3Array.forEach((h3, i) => {
+    h3.classList.remove("active");
+    offerSpanArray[i].classList.remove("show");
+  });
+};
 
-offerH3Array.forEach((h3,i) => {
-  h3.addEventListener("click", function(){
-  removeClass();
-  this.classList.add('active');
-  offerSpanArray[i].classList.add('show');
-})})
+offerH3Array.forEach((h3, i) => {
+  h3.addEventListener("click", function() {
+    removeClass();
+    this.classList.add("active");
+    offerSpanArray[i].classList.add("show");
+  });
+});
