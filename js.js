@@ -4,7 +4,7 @@ const aboutArrow = document.getElementById("aboutArrow");
 const div1 = document.querySelector(".divStart1");
 const div2 = document.querySelector(".divStart2");
 const main = document.querySelector("main");
-const body = document.querySelector("body");
+const html = document.querySelector("html");
 
 const aboutP1 = document.querySelector(".about p:nth-of-type(1)");
 const aboutP2 = document.querySelector(".about p:nth-of-type(2)");
@@ -67,7 +67,7 @@ arrow.addEventListener("click", function() {
   div2.classList.add("show");
   main.classList.add("show");
   navIcon.classList.remove("hide");
-  body.style.overflowY = "auto";
+  html.style.overflowY = "auto";
 });
 
 aboutH3first.addEventListener("click", function() {
