@@ -52,8 +52,6 @@ h1 {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  /* font-size: 6rem;
-	font-family: 'Major Mono Display', monospace;*/
 }
 
 h2 {
@@ -132,7 +130,6 @@ nav {
   -o-transition: 1s;
   transition: 1s;
   z-index: 5;
-  /* animation: navBack 10s ease infinite alternate; */
 }
 
 ul {
@@ -147,7 +144,6 @@ ul {
 
 li {
   height: 60px;
-  /* background-color: red; */
   list-style-type: none;
   margin-top: 50px;
   border-bottom: solid 1px #3d4187;
@@ -213,7 +209,6 @@ li.active {
 
 .icon {
   position: fixed;
-  /* background-color: red; */
   top: 5%;
   right: 5%;
   display: block;
@@ -479,10 +474,6 @@ li.active {
 }
 
 .contact div {
-  /* display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,15 +481,11 @@ li.active {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  /* align-items: flex-end; */
-  /* align-content:center; */
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
-  /* text-align: center; */
   font-size: 1.5rem;
   z-index: 1;
 }
@@ -546,67 +533,11 @@ a {
 
 /* --------------------------MEDIA QUIERIES------------------------ */
 
-/* @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-} */
-
 @media (min-width: 361px) and (orientation: portrait) {
   html {
     font-size: 12px;
   }
-  /* ABOUT */
-  /* .about h3{
-		font-size: 2.5rem;
-	}
-
-	.about p{
-		font-size: 1.5rem;
-	} */
-
-  /* OFFER */
-  /* .offer p{
-		font-size: 1.65rem;
-	}
-
-	.offer h3{
-		font-size: 1.5rem;
-	} */
 }
-
-/* @media (min-width: 566px)  and (orientation: portrait){
-	.about h3{
-		font-size: 2rem;
-	}
-	.about h3.active{
-		top:12%;
-	}
-	.about p{
-		font-size: 1.3rem;
-	}
-
-	.about p{
-		font-size: 1.3rem;
-	}
-
-	.offer p{
-		font-size: 1.3rem;
-	}
-
-	.contact{
-		padding-top: 3%;
-	}
-	.contact p{
-		line-height: 100%;
-	}
-} */
 
 @media (min-width: 361px) and (orientation: landscape) {
   .contact div {
@@ -673,20 +604,10 @@ a {
     flex-basis: 80%;
     height: 60vh;
     font-size: 2.2rem;
-    /* background-color: #003742;
-		box-shadow: 10px 10px 18px #888; */
     padding-left: 50px;
-
     margin-bottom: 40px;
   }
 
-  /* .offer span{
-		//padding:50px;
-	} */
-  /* .offer span{
-		top:auto;
-		bottom:30%;
-	} */
   .offer h3:nth-of-type(2n + 1) {
     border-right: 0;
   }
@@ -795,8 +716,6 @@ a {
     flex-basis: 80%;
     height: 40vh;
     font-size: 1.5rem;
-    /* background-color: #003742;
-		box-shadow: 10px 10px 18px #888; */
 
     margin-bottom: 40px;
   }
@@ -811,10 +730,7 @@ a {
     color: #000;
     cursor: pointer;
   }
-  /* .offer span{
-		top:auto;
-		bottom:30%;
-	} */
+
   .offer h3:nth-of-type(2n + 1) {
     border-right: 0;
   }
@@ -898,11 +814,11 @@ a {
 @-webkit-keyframes arrow {
   0% {
     -webkit-transform: scale(0.8);
-    transform: scale(0.8);
+    transform: scale(0.8) translateX(-50%);
   }
   100% {
     -webkit-transform: scale(1);
-    transform: scale(1);
+    transform: scale(1) translateX(-50%);
   }
 }
 
