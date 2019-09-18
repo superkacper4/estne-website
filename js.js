@@ -31,11 +31,9 @@ function delayReset() {
 
 navIcon.addEventListener("click", function() {
   let delay = 0.5;
-  console.log("elo");
   navLis.forEach(li => {
     li.classList.toggle("active");
     li.style.transitionDelay = delay + "s";
-    console.log(delay);
     delay += 0.25;
   });
   burger2.classList.toggle("active");
@@ -62,7 +60,6 @@ $("nav a").on("click", function() {
 });
 
 arrow.addEventListener("click", function() {
-  console.log("XDD0");
   div1.classList.add("show");
   div2.classList.add("show");
   main.classList.add("show");
