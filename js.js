@@ -59,12 +59,19 @@ $("nav a").on("click", function() {
   );
 });
 
+document.ontouchmove = function (e) {
+  e.preventDefault();
+}
+
 arrow.addEventListener("click", function() {
   div1.classList.add("show");
   div2.classList.add("show");
   main.classList.add("show");
   navIcon.classList.remove("hide");
   html.style.overflowY = "auto";
+  document.ontouchmove = function (e) {
+    return true;
+  }
 });
 
 aboutH3first.addEventListener("click", function() {
