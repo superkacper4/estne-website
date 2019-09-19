@@ -23,9 +23,11 @@ const burger3 = document.querySelector(".burger3");
 const navIcon = document.querySelector(".icon");
 const nav = document.querySelector("nav");
 
-document.addEventListener('touchmove', function(e) {
+function preventDefault(e){
   e.preventDefault();
-}, { passive: false });
+}
+
+document.body.addEventListener('touchmove', preventDefault, { passive: false });
 
 function delayReset() {
   navLis.forEach(li => {
