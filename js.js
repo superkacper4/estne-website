@@ -23,7 +23,7 @@ const burger3 = document.querySelector(".burger3");
 const navIcon = document.querySelector(".icon");
 const nav = document.querySelector("nav");
 
-window.onload = document.ontouchmove = function (e) {
+window.ontouchmove = function (e) {
   e.preventDefault();
 }
 
@@ -70,7 +70,7 @@ arrow.addEventListener("click", function() {
   main.classList.add("show");
   navIcon.classList.remove("hide");
   html.style.overflowY = "auto";
-  document.ontouchmove = function(e){ return true; }
+  window.ontouchmove = function(e){ return true; }
 });
 
 aboutH3first.addEventListener("click", function() {
