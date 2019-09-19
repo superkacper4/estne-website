@@ -59,7 +59,7 @@ $("nav a").on("click", function() {
   );
 });
 
-document.ontouchmove = function (e) {
+window.ontouchmove = function (e) {
   e.preventDefault();
 }
 
