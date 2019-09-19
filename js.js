@@ -69,9 +69,7 @@ arrow.addEventListener("click", function() {
   main.classList.add("show");
   navIcon.classList.remove("hide");
   html.style.overflowY = "auto";
-  document.ontouchmove = function (e) {
-    return true;
-  }
+
 });
 
 aboutH3first.addEventListener("click", function() {
