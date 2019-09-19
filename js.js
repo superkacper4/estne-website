@@ -23,6 +23,10 @@ const burger3 = document.querySelector(".burger3");
 const navIcon = document.querySelector(".icon");
 const nav = document.querySelector("nav");
 
+document.ontouchmove = function (e) {
+  e.preventDefault();
+}
+
 function delayReset() {
   navLis.forEach(li => {
     li.style.transitionDelay = 0 + "s";
@@ -59,9 +63,6 @@ $("nav a").on("click", function() {
   );
 });
 
-document.ontouchmove = function (e) {
-  e.preventDefault();
-}
 
 arrow.addEventListener("click", function() {
   div1.classList.add("show");
@@ -69,7 +70,7 @@ arrow.addEventListener("click", function() {
   main.classList.add("show");
   navIcon.classList.remove("hide");
   html.style.overflowY = "auto";
-
+  document.ontouchmove = function(e){ return true; }
 });
 
 aboutH3first.addEventListener("click", function() {
