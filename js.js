@@ -23,7 +23,7 @@ const burger3 = document.querySelector(".burger3");
 const navIcon = document.querySelector(".icon");
 const nav = document.querySelector("nav");
 
-document.ontouchmove = function (e) {
+window.onload = document.ontouchmove = function (e) {
   e.preventDefault();
 }
 
