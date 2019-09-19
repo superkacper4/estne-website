@@ -23,9 +23,9 @@ const burger3 = document.querySelector(".burger3");
 const navIcon = document.querySelector(".icon");
 const nav = document.querySelector("nav");
 
-window.ontouchmove = function (e) {
+document.addEventListener('touchmove', function(e) {
   e.preventDefault();
-}
+}, { passive: false });
 
 function delayReset() {
   navLis.forEach(li => {
@@ -70,7 +70,7 @@ arrow.addEventListener("click", function() {
   main.classList.add("show");
   navIcon.classList.remove("hide");
   html.style.overflowY = "auto";
-  window.ontouchmove = function(e){ return true; }
+  document.ontouchmove = function(e){ return true; }
 });
 
 aboutH3first.addEventListener("click", function() {
