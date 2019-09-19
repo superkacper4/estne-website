@@ -71,8 +71,8 @@ arrow.addEventListener("click", function() {
   navIcon.classList.remove("hide");
   html.style.overflowY = "auto";
   document.addEventListener('touchmove', function(e) {
-    return true
-  });
+    return true;
+  }, { passive: true });
 });
 
 aboutH3first.addEventListener("click", function() {
