@@ -224,6 +224,7 @@ li.active {
 
 .icon.hide {
   opacity: 0;
+  transform: scale(0);
 }
 
 .burger2,
