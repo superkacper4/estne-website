@@ -23,13 +23,21 @@ const burger3 = document.querySelector(".burger3");
 const navIcon = document.querySelector(".icon");
 const nav = document.querySelector("nav");
 
-function preventDefault(e){
+function preventDefault(e) {
   e.preventDefault();
 }
 
-$(document).ready(function(){
-  $(this).scrollTop(0);
-});
+function refreshReset() {
+  html.style.overflowY = "auto";
+  $("body, html").animate(
+    {
+      scrollTop: 0
+    },
+    0
+  );
+  setTimeout(html.style.overflowY = "hidden", 1000)
+}
+
 
 document.body.addEventListener('touchmove', preventDefault, { passive: false });
 
@@ -39,7 +47,7 @@ function delayReset() {
   });
 }
 
-navIcon.addEventListener("click", function() {
+navIcon.addEventListener("click", function () {
   let delay = 0.5;
   navLis.forEach(li => {
     li.classList.toggle("active");
@@ -53,7 +61,7 @@ navIcon.addEventListener("click", function() {
   setTimeout(delayReset, 1000);
 });
 
-$("nav a").on("click", function() {
+$("nav a").on("click", function () {
   nav.classList.remove("active");
   burger2.classList.remove("active");
   burger3.classList.remove("active");
@@ -70,7 +78,7 @@ $("nav a").on("click", function() {
 });
 
 
-arrow.addEventListener("click", function() {
+arrow.addEventListener("click", function () {
   div1.classList.add("show");
   div2.classList.add("show");
   main.classList.add("show");
@@ -79,16 +87,17 @@ arrow.addEventListener("click", function() {
   document.body.removeEventListener('touchmove', preventDefault);
 });
 
-aboutH3first.addEventListener("click", function() {
+aboutH3first.addEventListener("click", function () {
   this.classList.add("active");
   aboutH3second.classList.remove("active");
   aboutP1.classList.add("show");
   aboutP2.classList.add("hide");
   aboutP1.classList.remove("hide");
   aboutP2.classList.remove("show");
+  refreshReset;
 });
 
-aboutH3second.addEventListener("click", function() {
+aboutH3second.addEventListener("click", function () {
   this.classList.add("active");
   aboutH3first.classList.remove("active");
   aboutP2.classList.add("show");
@@ -105,9 +114,12 @@ const removeClass = () => {
 };
 
 offerH3Array.forEach((h3, i) => {
-  h3.addEventListener("click", function() {
+  h3.addEventListener("click", function () {
     removeClass();
     this.classList.add("active");
     offerSpanArray[i].classList.add("show");
   });
 });
+
+
+setTimeout(refreshReset, 1000)
