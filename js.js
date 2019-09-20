@@ -27,6 +27,10 @@ function preventDefault(e){
   e.preventDefault();
 }
 
+$(document).ready(function(){
+  $(this).scrollTop(0);
+});
+
 document.body.addEventListener('touchmove', preventDefault, { passive: false });
 
 function delayReset() {
