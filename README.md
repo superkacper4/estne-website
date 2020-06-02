@@ -12,7 +12,7 @@ Website was made to my father and his company. I tried my best with all stack wh
 ## Setup
 Click this link: http://www.estne.com.pl/
 
-##Status
+## Status
 Webiste is done. I only make small repairs if it is needed. I will make Estne Website 2.0 and you should see my progrss (I hope).
 
 ## Contact
